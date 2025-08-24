@@ -1,0 +1,14 @@
+{{> header}}
+
+<h1>{{title}}</h1>
+
+<body>
+<h1>My Items</h1>
+<ul>
+    {{#myItems}}
+        <li>{{.}}</li> <!-- The dot (.) refers to the current item in the iteration -->
+    {{/myItems}}
+</ul>
+</body>
+
+{{> footer}}

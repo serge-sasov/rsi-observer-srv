@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    image: spring-kotlin-app
+    ports:
+      - "8090:8080"
+    volumes:
+      - ./shared-folder:/app/shared-folder #Read-Only Bind Mount (Short Syntax):
+    environment:
+      - FOLDERPATH=/app/shared-folder
+      - FILENAME=names.csv

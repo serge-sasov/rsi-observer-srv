@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Table</title>
+    <style>
+        .table-wrapper {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-header, .table-row {
+            display: flex;
+            width: 100%;
+        }
+
+        .header-cell, .table-cell {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .header-cell {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .table-row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="table-wrapper">
+    <div class="table-header">
+        <div class="header-cell">ID</div>
+        <div class="header-cell">Имя</div>
+        <div class="header-cell">Email</div>
+        <div class="header-cell">Телефон</div>
+    </div>
+
+    <div class="table-body">
+        {{#persons}}
+            <div class="table-row">
+                <div class="table-cell">{{id}}</div>
+                <div class="table-cell">{{name}}</div>
+                <div class="table-cell">{{email}}</div>
+                <div class="table-cell">{{phone}}</div>
+            </div>
+        {{/persons}}
+    </div>
+</div>
+</body>
+</html>
